@@ -13,7 +13,7 @@
       uen:Region.Attached="True"
       Loaded="NavViewLoaded">
       <NavigationView.MenuItems>
-        <NavigationViewItem Content="Chat" uen:Region.Name="Second"/>
+        <NavigationViewItem Content="Chat" uen:Region.Name="Chat"/>
         <!-- Hack: This is to ensure a Settings item is picked up by the Navigator for NavigationView -->
         <NavigationViewItem Content="Settings" uen:Region.Name="Settings" Visibility="Collapsed"/>
       </NavigationView.MenuItems>

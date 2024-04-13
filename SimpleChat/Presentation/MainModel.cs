@@ -17,10 +17,10 @@ public partial record MainModel
 
     public IState<string> Name => State<string>.Value(this, () => string.Empty);
 
-    public async Task GoToSecond()
+    public async Task GoToChat()
     {
         var name = await Name;
-        await _navigator.NavigateViewModelAsync<SecondModel>(this, data: new Entity(name!));
+        await _navigator.NavigateViewModelAsync<ChatModel>(this, data: new Entity(name!));
     }
 
 }

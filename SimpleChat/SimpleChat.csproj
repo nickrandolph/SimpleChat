@@ -46,16 +46,5 @@
       ExtensionsCore;
     </UnoFeatures>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Presentation\SettingsPage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Presentation\SettingsPage.xaml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Presentation\SettingsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
 
 </Project>

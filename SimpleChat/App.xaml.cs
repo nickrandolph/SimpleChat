@@ -84,7 +84,7 @@ public partial class App : Application
             new ViewMap(ViewModel: typeof(ShellModel)),
             new ViewMap<MainPage, MainModel>(),
             new ViewMap<SettingsPage, SettingsModel>(),
-            new DataViewMap<SecondPage, SecondModel, Entity>()
+            new DataViewMap<ChatPage, ChatModel, Entity>()
         );
 
         routes.Register(
@@ -93,7 +93,7 @@ public partial class App : Application
                 [
                     new ("Main", View: views.FindByViewModel<MainModel>(), Nested:
                         [
-                            new ("Second", View: views.FindByViewModel<SecondModel>()),
+                            new ("Chat", View: views.FindByViewModel<ChatModel>()),
                             new ("Settings", View: views.FindByViewModel<SettingsModel>())
                         ])
                 ]
