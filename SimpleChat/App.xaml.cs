@@ -59,6 +59,7 @@ public partial class App : Application
                     configBuilder
                         .EmbeddedSource<App>()
                         .Section<AppConfig>()
+                        .Section<SettingsInfo>()
                 )
                 .ConfigureServices((context, services) =>
                 {
