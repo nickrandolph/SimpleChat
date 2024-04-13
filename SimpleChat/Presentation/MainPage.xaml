@@ -9,21 +9,18 @@
       Background="{ThemeResource BackgroundBrush}">
 
   <Grid utu:SafeArea.Insets="VisibleBounds">
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" />
-      <RowDefinition />
-    </Grid.RowDefinitions>
-    <utu:NavigationBar Content="{Binding Title}" />
+    <NavigationView x:Name="NavView"
+      uen:Region.Attached="True"
+      Loaded="NavViewLoaded">
+      <NavigationView.MenuItems>
+        <NavigationViewItem Content="Chat" uen:Region.Name="Second"/>
+        <!-- Hack: This is to ensure a Settings item is picked up by the Navigator for NavigationView -->
+        <NavigationViewItem Content="Settings" uen:Region.Name="Settings" Visibility="Collapsed"/>
+      </NavigationView.MenuItems>
 
-    <StackPanel Grid.Row="1"
-          HorizontalAlignment="Center"
-          VerticalAlignment="Center"
-          Spacing="16">
-      <TextBox Text="{Binding Name, Mode=TwoWay}"
-          PlaceholderText="Enter your name:" />
-      <Button Content="Go to Second Page"
-          AutomationProperties.AutomationId="SecondPageButton"
-          Command="{Binding GoToSecond}" />
-    </StackPanel>
+      <Grid uen:Region.Attached="True"
+            uen:Region.Navigator="Visibility">
+      </Grid>
+    </NavigationView>
   </Grid>
 </Page>
