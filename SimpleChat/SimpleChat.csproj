@@ -46,5 +46,8 @@
       ExtensionsCore;
     </UnoFeatures>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" />
+  </ItemGroup>
 
 </Project>
